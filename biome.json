@@ -50,8 +50,7 @@
             },
             "suspicious": {
                 "noArrayIndexKey": "off",
-                "noConfusingVoidType": "error",
-                "noConsoleLog": "error"
+                "noConfusingVoidType": "error"
             },
             "correctness": {
                 "noUnnecessaryContinue": "off",
