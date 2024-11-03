@@ -1,6 +1,8 @@
-## Dev Setup
+# Build-in Hooks + Custom Hooks + React Context
 
 [Lecture Notes](https://docs.google.com/presentation/d/1-wFM1e9BXv1YQ8Dk3GxGgSoJJQZ5YAD8EDFJNiELSEE/edit?usp=sharing)
+
+## Setup
 
 **Prerequisite: you have `node` installed on the command line and can run `node --version`**
 
