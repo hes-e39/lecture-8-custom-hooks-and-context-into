@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type StartFunction = () => void;
 type StopFunction = () => void;
@@ -22,6 +22,13 @@ function useTimer(): { start: StartFunction; stop: StopFunction; secondsPassed: 
     function stop() {
         intervalRef.current && clearInterval(intervalRef.current);
     }
+
+    // cleanup function if useTimer is unmounted
+    useEffect(() => {
+        return () => {
+            intervalRef.current && clearInterval(intervalRef.current);
+        };
+    }, []);
 
     let secondsPassed = 0;
     if (startTime != null && now != null) {

@@ -38,6 +38,8 @@ const BlogProvider = ({ children }: { children: React.ReactNode }) => {
         <BlogContext.Provider
             value={{
                 posts,
+                selected,
+                setSelected,
                 createPost: ({ title, content }) => {
                     const id = makeId();
                     const newPost = { id, title, content };
@@ -45,14 +47,12 @@ const BlogProvider = ({ children }: { children: React.ReactNode }) => {
                     setSelected(null);
                     return newPost;
                 },
-                updatePost: post => {
+                updatePost: (post: Post) => {
                     const updatedPosts = posts.map(p => (p.id === post.id ? post : p));
                     setSelected(null);
                     setPosts(updatedPosts);
                 },
                 deletePost: id => setPosts(posts.filter(p => p.id !== id)),
-                selected,
-                setSelected,
             }}
         >
             {children}

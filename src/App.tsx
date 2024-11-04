@@ -1,4 +1,5 @@
 import Blog from './blog-example';
+// import MouseTracker from './examples/MouseTracker';
 import PersistedState from './examples/PersistedState';
 import StopWatchWithCustomHook from './examples/StopWatchWithCustomHook';
 import ThemeContextExample from './examples/ThemeContextExample';
@@ -21,11 +22,12 @@ function Example({ children, number }: { children: React.ReactNode; number: numb
     );
 }
 
-const examples = [VideoPlayer, PersistedState, StopWatchWithCustomHook, ThemeContextExample, Blog];
+const examples = [VideoPlayer, StopWatchWithCustomHook, PersistedState, ThemeContextExample, Blog];
 
 function App() {
     return (
         <div className="flex flex-col justify-start gap-8 pt-32 px-12 pb-24">
+            {/* <MouseTracker /> */}
             {examples.map((E, index) => (
                 <Example key={index} number={index}>
                     <E />

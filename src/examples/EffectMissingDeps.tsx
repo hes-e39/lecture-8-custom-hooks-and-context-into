@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 const EffectMissingDeps = () => {
     const [count, setCount] = useState(0);
 
-    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+    // biome-ignore lint/correctness/useExhaustiveDependencies: demoing what happens to count
     useEffect(function () {
         setInterval(() => {
             console.log(`Count is: ${count}`);
