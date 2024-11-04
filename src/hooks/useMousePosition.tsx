@@ -6,12 +6,8 @@ export const useMousePosition = () => {
 
     useEventListener('mousemove', e => {
         if (e instanceof MouseEvent) {
-            setPosition({ x: e.clientX - window.innerWidth / 2, y: -e.clientY + window.innerHeight / 2 });
+            setPosition({ x: e.clientX, y: e.clientY });
         }
-    });
-
-    useEventListener('click', () => {
-        console.log('Clicked the window!');
     });
 
     return position;

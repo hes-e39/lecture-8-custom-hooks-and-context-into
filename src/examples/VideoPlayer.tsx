@@ -16,6 +16,7 @@ function VideoPlayer({ src, isPlaying }: { src: string; isPlaying: boolean }) {
 
 export default function App() {
     const [isPlaying, setIsPlaying] = useState(false);
+
     return (
         <div>
             <button className="bg-gray-500 p-2 rounded-md" onClick={() => setIsPlaying(!isPlaying)}>
